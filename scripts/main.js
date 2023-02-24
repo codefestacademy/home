@@ -73,6 +73,6 @@ var menu = $(".menu-items")
 		navigator.share({
 			title: "CodeFest Academy | Home",
 			text: "Share CodeFest Academy",
-			url: "https://codefestacademy.github.io/home.html"
+			url: "https://codefestacademy.github.io/home/"
 		});
 	}
