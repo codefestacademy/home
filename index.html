@@ -12,6 +12,7 @@
 <script src="scripts/excelprocess.js"></script>
 </head>
 <body>
+<span class="d-sm-none">
 	<div class="topnav">
 		<a href="#">
 			<img src="images/logo.png"> CodeFest
@@ -91,11 +92,13 @@
 		</ul>
 	</div>
 	
-	<div class="parralax" style="background-image:url(images/pupils-activities.webp)"></div>
+	<div class="parralax" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/pupils-activities.webp)">
+		<i class="fas fa-laptop-code fa-4x mb-5 text-warning"></i>
+		<span>Programs We Offer</span>
+	</div>
 	
-	<h2 class="text-center pt-5 pb-4">Programs We Offer</h2>
 	<div class="w-100 pt-3 pb-5 bg-light">
-		<h3 class="text-center mt-4 pt-3 mb-3" style="color:orange">Scratch Computer Coding</h3>
+		<h3 class="text-center mt-4 pt-3 px-5 mb-3" style="color:orange">Scratch Computer Coding</h3>
 		<div class="d-flex w-100 px-2 align-items-center justify-content-between">
 			<div style="width:32%"><img src="images/scratch3.jpeg" class="w-100"></div>
 			<p style="width:65%">Scratch is a high-level block-based visual programming language aimed primarily at children as an educational tool for programming, 
@@ -104,7 +107,7 @@
 			</p>
 		</div>
 		
-		<h3 style="color:purple;" class="text-center mt-5 mb-3">MIT App Inventor Coding</h3>
+		<h3 style="color:purple;" class="text-center mt-5 px-5 mb-3">MIT App Inventor Coding</h3>
 		<div class="d-flex w-100 px-2 align-items-center justify-content-between">
 			<div style="width:32%"><img src="images/ai.jpg" class="w-100"></div>
 			<p style="width:65%">
@@ -114,7 +117,7 @@
 			</p>
 		</div>
 		
-		<h3 style="color:teal;" class="text-center mt-5 mb-3">Arduino Robotics and Electronics</h3>
+		<h3 style="color:teal;" class="text-center mt-5 px-5 mb-3">Arduino Robotics and Electronics</h3>
 		<div class="d-flex w-100 px-2 align-items-center justify-content-between">
 			<div style="width:32%"><img src="images/arduino-logo.jpg" class="w-100"></div>
 			<p style="width:65%">
@@ -124,7 +127,7 @@
 			</p>
 		</div>
 		
-		<h3 class="text-center mt-5 mb-3 text-danger">Website Design with HTML/CSS</h3>
+		<h3 class="text-center mt-5 px-5 mb-3 text-danger">Website Design with HTML/CSS</h3>
 		<div class="d-flex w-100 px-3 align-items-center justify-content-between">
 			<div style="width:32%"><img src="images/htmlcss.jpg" class="w-100"></div>
 			<p style="width:65%">
@@ -165,8 +168,8 @@
 	
 	<div class="my-5">&nbsp;</div>
 	
-	<div class="gallery-container">
-		<div class="gallery clearfix">
+	<div class="testimony-container" data-width="340px">
+		<div class="testimony clearfix">
 			<div>
 				<img src="images/parent1.jpg">
 				<span class="name">Ajibola Cole</span>
@@ -209,5 +212,11 @@
 <script>
 	
 </script>
+</span>
+
+<div class="for-laptop d-none d-sm-block">
+	<h2>CodeFest Academy</h2>
+	<div>Please use a mobile device to view this website. Or, resize your browser to the width of mobilephone.</div>
+</div>
 </body>
 </html>
