@@ -41,33 +41,39 @@ $("#whatsapplink").click(function(event){
 	window.location.href = url
 })
 	
-function gallerySetup(){
-	let w = "340px"
-	let container = $(".gallery-container")
-	let gallery = $(".gallery")
-	let imgContainer = gallery.find("div")
+function testimonySetup(){
+	let container = $(".testimony-container")
+	let testimony = $(".testimony")
+	let imgContainer = testimony.find("div")
+	//let w = container.attr("data-width")
+    let w = "340px"
 	container.css("width", w)
-	gallery.css("width", imgContainer.length * parseInt(w))
+	testimony.css("width", imgContainer.length * parseInt(w))
 	imgContainer.css("width", w)
-}; gallerySetup()
+}; testimonySetup()
 	
-function gallery(){
-	var container = $(".gallery")
-	container.animate({"marginLeft":"-320px"}, 500, function(){
-		$(this).find("div:first .desc").css("bottom", "-120px")
-		$(this).find("div:first .name").css("top", "-60px")
-			
-		var imgHolder = $(this).find("div")
-		imgHolder.first().insertAfter(imgHolder.last())
-		$(this).css("marginLeft","0px")
-			
-		$(".gallery div").first().find(".desc").animate({"bottom":"0px"}, 200)
-		$(".gallery div").first().find(".name").animate({"top":"0px"}, 200)
-	})
-		
-	setTimeout(gallery, 8000)
+function testimony(){
+    $(".testimony div").first().find(".desc").animate({"bottom":"-150px"}, 500)
+	$(".testimony div").first().find(".name").animate({"top":"-50px"}, 500)
+
+    setTimeout(() => {
+	    var container = $(".testimony")
+        container.animate({"marginLeft":"-320px"}, 500, function(){
+            $(this).find("div:first .desc").css("bottom", "-120px")
+            $(this).find("div:first .name").css("top", "-60px")
+                
+            var imgHolder = $(this).find("div")
+            imgHolder.first().insertAfter(imgHolder.last())
+            $(this).css("marginLeft","0px")
+            
+            $(".testimony div").first().find(".desc").animate({"bottom":"0px"}, 500)
+            $(".testimony div").first().find(".name").animate({"top":"0px"}, 500)
+        })
+	}, 500);
+
+	setTimeout(testimony, 8000)
 }
-gallery()
+testimony()
 	
 async function shareHandler(){
 	navigator.share({
