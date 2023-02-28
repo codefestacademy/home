@@ -51,11 +51,17 @@ function testimonySetup(){
 	testimony.css("width", imgContainer.length * parseInt(w))
 	imgContainer.css("width", w)
 }; testimonySetup()
+
+var divs = $(".testimony > div")
+divs.each(function(i,v){
+	$(this).attr("index", i)
+	$(".nav-button").append($("<span>"))
+})
 	
 function testimony(){
     $(".testimony div").first().find(".desc").animate({"bottom":"-150px"}, 500)
 	$(".testimony div").first().find(".name").animate({"top":"-50px"}, 500)
-
+	
     setTimeout(() => {
 	    var container = $(".testimony")
         container.animate({"marginLeft":"-320px"}, 500, function(){
@@ -65,9 +71,17 @@ function testimony(){
             var imgHolder = $(this).find("div")
             imgHolder.first().insertAfter(imgHolder.last())
             $(this).css("marginLeft","0px")
+           
+           	let first = $(".testimony div").first()
+            first.find(".desc").animate({"bottom":"0px"}, 500)
+            first.find(".name").animate({"top":"0px"}, 500)
             
-            $(".testimony div").first().find(".desc").animate({"bottom":"0px"}, 500)
-            $(".testimony div").first().find(".name").animate({"top":"0px"}, 500)
+            let span = $(".nav-button span")
+            span.css("background","none")
+            let divs = container.find("div:first")
+            let index = divs.attr("index")
+            span.eq(index).css("background","black")
+            
         })
 	}, 500);
 
