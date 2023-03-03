@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Kids Should Learn Coding</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<script src="scripts/jquery-3.6.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/all.min.js"></script>
+	<script src="components/topnav.js"></script>
+	<script src="components/footer.js"></script>
+
+    <style>
+        body,html{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .page-pad{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .header{
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/kid-with-laptop.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .parallax{
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 15px;
+        }
+
+        .parallax span{
+            font-size: 2.5em;
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            const dt = new Date()
+
+            $("#date").text(dt.getDate() + "-" + (dt.getMonth()+1) + "-" + dt.getFullYear())
+            $("#time").text(
+                (dt.getHours() > 12 ? dt.getHours()-12 : dt.getHours()) + ":" + 
+                dt.getMinutes() + ":" + 
+                dt.getSeconds() + " " +
+                (dt.getHours() > 12 ? "PM" : "AM")
+            )
+        })
+
+    </script>
+</head>
+<body>
+    <topnav-component></topnav-component>
+
+    
+    <div class="header">
+        Coding for Kids: Top Reasons Why Coding is Important For Kids</h3>
+    </div>
+    <div class="d-flex justify-content-between page-pad mt-3">
+        <span id="date">2-3-2023</span>
+        <span id="time">12:00:00 AM</span>
+    </div>
+
+    <hr>
+    <div class="page-pad mt-5">
+        Coding is the process of using a programming language to get a computer to behave how you want it to. Or in other words, Coding is a skill where you take instructions (the steps in a task) and translate it into a language the computer understands since computers do not communicate like humans. As stated earlier it is the core of technology and speaking of the current scenario, more and more people are learning the highly demanded skill so you might as well try it. I think investing in learning the skill will prove to be more beneficial than thought not just for the kids or youth but also for the middle-aged or even older for that matter. I feel there is no harm in inculcating something in the beginning and to support that, kids should also learn to code. Not that the elder people cannot, nothing of that sort, but kids will have a comparatively longer period of time to master it.
+    </div>
+
+    <div class="parallax mt-5 mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/kids-in-lab.jpg);">
+        <span>why kids should learn coding</span>
+    </div>
+
+    <div class="page-pad">
+        <h5>It triggers their thinking ability:</h5>
+        Computer programming brings the creative element out of every child. Because programming requires the use of logical thinking, children tend to think differently.
+        <h5 class="mt-4">It builds problem-solving skills:</h5>
+        Problem-solving is equally important in daily life. Learning to code gives the children a chance to learn this skill in their growing age that will go a long way with them throughout their life.
+        <h5 class="mt-4">Develops resilience:</h5>
+        Failing and then succeeding is the best way to learn. Children fail to do a certain task but their zeal to succeed does not decrease. This teaches them to remain optimistic no matter what and that in the end you try, try and finally succeed.
+    </div>
+
+    <div class="parallax mt-5 mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(images/robot-touch.png);">
+        <span>Computer programming is the future</span>
+    </div>
+
+    <div class="page-pad">
+        Quite evident from the current status, that programming by no means is going down rather it will only reach greater heights. Indulging in something that has a bright future since the start will definitely help the kids to master it in their growing period and they don't have to learn it later on for better career prospects.
+        Speaking of the benefits, because that's the biggie:
+
+        <ul>
+            <li>creativity.</li>
+            <li>Secondly, it is a very promising career.</li>
+            <li>It helps in building resilience in kids at a young age.</li>
+            <li>Coding is the new literacy.</li>
+            <li>It helps in the development of computational skills.</li>
+        </ul>
+        Coding helps the kids in furnishing many skills other than computational such as problem-solving and thinking.
+        Now the question is why parents should encourage their kids to learn to code?
+        I think the above-mentioned points are a few major things that every parent would want their kids to learn any which way so then why not through a way that has some additional advantages.
+
+        Many parents don't get the idea of indulging or promoting technical skills and others that do, are not very accepting on their part. Even if we eliminate the idea of some extra creativity and the sole concept of learning/developing computational skills, we have the 'future' on the brighter side that cannot be neglected.
+    </div>
+
+    <footer-component></footer-component>
+</body>
+</html>
