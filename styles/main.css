@@ -48,7 +48,7 @@ body{
 }
 		
 .feature > div:hover{
-	background: #ddd;
+	background: #eee;
 	transition: 0.3s;
 }
 
@@ -194,7 +194,7 @@ body{
 }
 
 .partners{
-	background: tan;
+	background: #666699;
 	padding: 50px 0;
 	margin-top: 100px;
 }
@@ -221,10 +221,11 @@ body{
 	text-decoration: none;
 	display: in-block;
 	padding: 10px 15px;
-	background: orange;
-	color: black;
+	background: #33ccff;
+	color: white;
 	border-radius: 20px;
 	margin-top: 20px;
+	font-size: 1.2em;
 }
 
 .intro-buttons{
@@ -247,5 +248,5 @@ body{
 }
 
 .purple{
-	color: purple;
+	color: #33ccff;
 }
