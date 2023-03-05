@@ -92,9 +92,9 @@ $(document).ready(function(){
         
     async function shareHandler(){
         navigator.share({
-            title: "Tapajyoti Bose | Portfolio",
-            text: "Check out my website",
-            url: "https://tapajyoti-bose.vercel.app/"
+            title: "CodeFest Academy",
+            text: "Visit website",
+            url: "https://codefestacademy.github.io/home.html"
         });
     }
     
