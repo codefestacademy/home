@@ -12,10 +12,13 @@ class Topnav extends HTMLElement {
 					overlay.fadeOut()
 					document.body.style.overflow = "auto"
 					open = false
+					$("main").css({"filter":"blur(0px)"})
 				}else{
-					overlay.fadeTo(50, 0.4)
+					overlay.fadeTo(50, 0)
 					document.body.style.overflow = "hidden"
 					open = true
+					$("main").css("filter","blur(2px)")
+					//$("main").css("filter","grayscale(100%)")
 				}
 				menu.toggleClass("menu-slidein")
 			})
