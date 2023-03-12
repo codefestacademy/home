@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CodeFest Academy | Gallery</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<script src="scripts/jquery-3.6.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/all.min.js"></script>
+	<script src="components/topnav.js"></script>
+	<script src="components/footer.js"></script>
+
+    <style>
+    .banner{
+    	margin: 0 auto;
+    	position: relative;
+    }
+    
+    .carousel{
+    	overflow: hidden;
+    	margin: 0 auto;
+    	position: relative;
+    	background: silver;
+    }
+    
+    .slider img{
+    	float: left;
+    }
+    
+    .controls, .banner-text{
+    	position:absolute;
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+    	align-items: stretch;
+    	justify-content: space-between;
+    }
+    
+    .controls span{
+    	padding: 5px 10px;
+    	background: rgba(0,0,0,0.2);
+    	color: #fff;
+    	padding-top: 2em;
+    	font-size: 3em;
+    	display: ;
+    }
+    
+    .banner-text{
+    	background: rgba(0,0,255,0.5);
+    	font-size: 1em;
+    	color: white;
+    	justify-content: center;
+    	flex-direction: column;
+    }
+    
+    .banner-text span{
+    	font-size: 1.5em;
+    }
+    
+    body{
+    	filter: blur(8p);
+    }
+    </style>
+    
+    </head>
+    <body>
+    	<topnav-component class="d-sm-none"></topnav-component>
+    	
+    	<span id="main">
+    	<h2 class="text-center my-5">Gallery exhibit</h2>
+    	<div class="banner" data-width="360">
+   		 	<div class="carousel">
+    			<div class="slider">
+    				<img src="images/coding-banner.png">
+    				<img src="images/3-kids-with-tablet.jpg">
+    				<img src="images/coding.jpg">
+    			</div>
+    			<div class="controls">
+    				<span class="prev"><i class="fas fa-chevron-left"></i></span>
+    				<span class="next"><i class="fas fa-chevron-right"></i></span>
+    			</div>
+    			<div class="banner-text d-none">
+    				<span>Hello World</span>
+    				<span>The world sees it here</span>
+    			</div>
+    		</div>
+    	</div>
+    	
+    	<div style="margin-top:100px"></div>
+    	
+    	<footer-component class="d-sm-none"></footer-component>
+    	</span>
+    
+    	<script>
+    		$(document).ready(function(){
+    			var interval
+    			var clr
+    			var width = $(window).width()
+    			var slider = $(".slider")
+    			
+    			$(".carousel").width(width)
+    			$(".slider img").width(width)
+    			slider.width(width*3)
+    
+    			function autoSlide(){
+    				interval = setInterval(function(){
+    					nextSlide()
+    				}, 4000)
+   	 			}; autoSlide()
+    
+    			$(".controls span").click(function(){
+    				clearInterval(interval)
+    			})
+    
+   		 		$(".next").click(function(){
+    				resumeAutoSlide()
+    				nextSlide()
+    			})
+    
+    			function nextSlide(){
+   		 			//var slider = $(".slider")
+    				slider.stop()
+    				slider.animate({"margin-left": -1*width}, 500, function(){
+    					slider.find("img:first").insertAfter(slider.find("img:last"))
+    					slider.css("margin-left", 0)
+   		 			})
+   		 		}
+    
+   		 		$(".prev").click(function(){
+    				resumeAutoSlide()
+    				//var slider = $(".slider")
+    				slider.stop()
+    				slider.find("img:last").insertBefore(slider.find("img:first"))
+    				slider.css("margin-left", -1*width)
+    				slider.animate({"margin-left": 0}, 500)
+    			})
+    
+    			function resumeAutoSlide(){
+    				clearTimeout(clr)
+    				clr = setTimeout(autoSlide, 7000)
+    			}
+   		 	})
+    	</script>
+	</body>
+</html>

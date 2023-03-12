@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeFest Academy | Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<script src="scripts/jquery-3.6.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/all.min.js"></script>
+	<script src="components/topnav.js"></script>
+	<script src="components/footer.js"></script>
+
+<style type="text/css">
+	#txtName, #txtMsg{
+		border: solid 1px rgba(0,0,255,0.5);
+		border-radius: 5px;
+		padding: 5px;
+		transition: 0.3s;
+	}
+	
+	#txtName:focus , #txtMsg:focus{
+		box-shadow: 0px 0px 0px 3px rgba(0,0,255,0.4);
+		border: solid 1px rgba(0,0,255,0.5) !important;
+	}
+	
+	.sharebtn{
+		background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
+	}
+	
+	form{
+		background: #eee;
+	}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){       
+    $("#whatsapplink").click(function(event){
+    	event.preventDefault()
+    
+        var inputerr = true
+        var name = $("#txtName")
+        var msg = $("#txtMsg")
+            
+        name.css("border-color","gray")
+        msg.css("border-color","gray")
+            
+        if (name.val().trim()==""){
+            name.css("border-color","red")
+            inputerr &= false
+        }
+            
+        if (msg.val().trim()==""){
+            msg.css("border-color","red")
+            inputerr &= false
+        }
+            
+        if (!inputerr){ return }
+            
+        var url = $("#whatsapplink").attr("href") + "?text=*" + name.val().trim() +"* - "+ msg.val().trim()
+        window.location.href = url
+    })
+   
+   	async function shareHandler(){
+   		navigator.share({
+   			title: "CodeFest Academy",
+   			text: "Visit website",
+   			url: "https://codefestacademy.github.io/home.html"
+   		});
+   	}
+})
+</script>
+</head>
+<body>
+	<topnav-component></topnav-component>
+	
+	<main id="main">
+		<div class="container">
+		<h3 class="text-dark text-center py-5"><i class="fas fa-envelope"></i> Contact Us</h3>
+		<form class="d-flex flex-column px-4 py-5 rounded">
+			<label for="txtName">Name:</label>
+			<input id="txtName" type="text" placeholder="Enter your name/school name">
+			<br>
+			<label for="txtMsg">Message:</label>
+			<textarea id="txtMsg"></textarea>
+			<br>
+			<div class="text-center mt-4">
+				<a href="https://wa.me/2348068654944" id="whatsapplink"><img src="images/WhatsAppButtonGreenSmall.png" style="width: 70%;"></a>
+			</div>
+		</form>
+		
+		<span class="d-none">
+			<div class="d-flex justify-content-center mt-2">
+				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook fa-2x text-dark"></i></a>
+				<a href="https://wa.me/2348068654944" class="p-2 mx-1"><i class="fab fa-whatsapp fa-2x text-dark"></i></a>
+				<a href="#" class="p-2 mx-1"><i class="fab fa-twitter fa-2x text-dark"></i></a>
+				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook-messenger fa-2x text-dark"></i></a>
+			</div>
+			<div class="text-center mt-2">
+				<button onclick="shareHandler()" type="button" class="sharebtn btn btn-primary"><i class="fas fa-share-square"></i> Share this website</button>
+			</div>
+		</span>
+		</div>
+		
+		<div style="margin-top:100px;"></div>
+		<footer-component></footer-component>
+	</main>
+</body>
+</html>
