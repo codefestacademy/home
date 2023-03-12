@@ -1,25 +1,8 @@
-$(document).ready(function(){
-    /**var menu = $(".menu-items")
-    var overlay = $(".overlay")
-    var open = false
-        
-    $(".menubars").click(function(){
-        if(open){
-            overlay.fadeOut()
-            document.body.style.overflow = "auto"
-            open = false
-        }else{
-            overlay.fadeTo(50, 0.4)
-            document.body.style.overflow = "hidden"
-            open = true
-        }
-        menu.toggleClass("menu-slidein")
-    })**/
-        
-        
+$(document).ready(function(){       
     $("#whatsapplink").click(function(event){
+    	event.preventDefault()
+    
         var inputerr = true
-        event.preventDefault()
         var name = $("#txtName")
         var msg = $("#txtMsg")
             
