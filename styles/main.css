@@ -24,8 +24,7 @@ body{
 }
 
 .intro{
-	margin: 0 15px;
-	margin-top: 80px;
+	margin: 80px 15px 0 15px;
 	display: flex;
 	align-items: center;
 }
@@ -140,10 +139,6 @@ body{
 	font-size: 1.1em;
 }
 
-.sharebtn{
-	background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
-}
-
 .parralax{
 	background-attachment: fixed;
 	background-position: center;
@@ -181,7 +176,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-image: linear-gradient(rgba(0,102,102,0.95), rgba(0,102,102,0.95)), url(../images/coding.png);
+	background-image: linear-gradient(rgba(0,102,102,0.95), rgba(0,102,102,0.95)), url(../images/coding.jpg);
 	padding: 30px 15px 150px 15px;
 	margin-top: 80px;
 }
@@ -200,8 +195,8 @@ body{
 }
 		
 .slide{
-	width: 250px;
-	height: 250px;
+	width: 190px;
+	height: 200px;
 	margin: 0 auto;
 	position: relative;
 	border-radius: 10px;
@@ -247,6 +242,10 @@ body{
 	color: #4d6680;
 }
 
-.purple{
+.lightblue{
 	color: #33ccff;
+}
+
+.fontsize-normal{
+
 }
