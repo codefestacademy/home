@@ -9,16 +9,15 @@ class Topnav extends HTMLElement {
 				
 			$(".menubars, .overlay").click(function(){
 				if(open){
-					overlay.fadeOut()
+					overlay.fadeOut(100)
 					document.body.style.overflow = "auto"
 					open = false
-					$("main").css({"filter":"blur(0px)"})
+					$("#main").css({"filter":"blur(0px)"})
 				}else{
-					overlay.fadeTo(50, 0)
+					overlay.fadeTo(100, 0.5)
 					document.body.style.overflow = "hidden"
 					open = true
-					$("main").css("filter","blur(2px)")
-					//$("main").css("filter","grayscale(100%)")
+					$("#main").css("filter","blur(5px)")
 				}
 				menu.toggleClass("menu-slidein")
 			})
@@ -43,7 +42,7 @@ class Topnav extends HTMLElement {
 				width: 100%;
 				height: 100%;
 				margin: 0;
-				padding-top: 30px;
+				padding-top: 25px;
 			}
 			
 			.topnav{
@@ -58,6 +57,7 @@ class Topnav extends HTMLElement {
 				box-shadow: 1px 0px 5px 2px black;
 				padding: 0 5px;
 				z-index: 9999;
+				overflow: auto;
 			}
 			
 			.topnav img{
@@ -67,18 +67,19 @@ class Topnav extends HTMLElement {
 			.topnav a{
 				color: black;
 				text-decoration: none;
-				font-size: 1.1em;
 				padding: 5px;
 			}
 			
 			.topnav .menu-items{
 				position: fixed;
+				overflow: auto;
 				width: 70%;
 				height: 100vh;
 				background: linear-gradient(to bottom right, #8000ff, #bf00ff);
 				left: -80%;
-				top: 60px;
-				padding-top: 30px;
+				top: 53px;
+				padding-top: 20px;
+				font-size: 1.1rem;
 				transition: 0.3s;
 			}
 			
@@ -93,11 +94,40 @@ class Topnav extends HTMLElement {
 			
 			.topnav .overlay{
 				position: fixed;
-				top: 60px;
+				top: 53px;
 				height: 100vh;
 				width: 100vw;
 				background: black;
 				display:none;
+			}
+			
+			.social-container{
+				display: flex;
+				font-size: 1.1rem;
+				flex-direction: column;
+			}
+			
+			.social-container *{
+				font-size: 1.1rem;
+				color: #fff;
+			}
+			
+			.social-header{
+				font-size: 1.3em;
+				margin-top: 30px;
+				margin-bottom: 20px;
+				color: cyan;
+				text-align: center;
+			}
+			
+			.social-container a{
+				padding: 5px;
+				background: rgba(0,0,0,0.2);
+				margin-bottom: 1px;
+			}
+			
+			.sharebtn{
+				background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
 			}
 			</style>
 			
@@ -109,7 +139,29 @@ class Topnav extends HTMLElement {
        				<a href="gallery.html">Gallery</a>
        				<a href="contact.html">Contact</a>
        				<a href="about.html">About</a>
-       				<hr>
+       				<div class="social-header">Connect with us</div>
+       				<div class="social-container">
+       					<a href="https://facebook">
+       						<i class="fab fa-facebook"></i>
+       						<span>Facebook</span>
+       					</a>
+       					<a href="https://wa.me/2348068654944">
+       						<i class="fab fa-whatsapp"></i>
+       						<span>WhatsApp</span>
+       					</a>
+       					<a href="https://me.facebook/">
+       						<i class="fab fa-facebook-messenger"></i>
+       						<span>Facebook Messenger</span>
+       					</a>
+       					<a href="https://gmail">
+       						<i class="fas fa-envelope"></i>
+       						<span>Gmail</span>
+       					</a>
+       				</div>
+       				<div class="text-center mt-5">
+       					<button onclick="shareHandler()" type="button" class="sharebtn btn btn-primary"><i class="fas fa-share-square"></i> Share this website</button>
+       				</div>
+       				<div style="margin-bottom: 200px;"></div>
        			</div>
        			<div class="menubars">
        				<i class="fas fa-bars fa-2x"></i>
