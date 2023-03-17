@@ -6,11 +6,13 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
 	<link rel="stylesheet" href="styles/main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
 	<script src="scripts/jquery-3.6.1.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/all.min.js"></script>
+	<script src="scripts/counter.js"></script>
 	<script src="scripts/main.js"></script>
+	<script src="components/menubar.js"></script>
 	<script src="components/topnav.js"></script>
 	<script src="components/footer.js"></script>
 
@@ -34,8 +36,9 @@
 
 <body>
 	<topnav-component class="d-sm-none"></topnav-component>
+	<menubar-component class="d-none d-sm-block"></menubar-component>
 
-	<main id="main" class="d-sm-none">
+	<main id="main" class="">
 		<div class="banner px-2">
 			<span class="text-light">
 				<h1 class="w-3">CodeFest Academy</h1>
@@ -44,218 +47,250 @@
 			</span>
 		</div>
 		
-		<div class="intro">
-			<span>
-				<h3 class="text-center mb-4 lightblue"><i class="fas fa-laptop-code fa-2x"></i><br><br>Coding and Robotics?</h3>
-				<p>
-					Coding, sometimes called computer programming, is how we communicate with computers. Code tells a computer what actions to take, and writing code is like creating a set of instructions. By learning to write code, you can tell computers what to do or how to behave in a much faster way. You can use this skill to make websites and apps, process data, and do lots of other cool things.
-					<br>
-					<div class="intro-buttons"><a href="coding-robotics.html">READ MORE</a><a href="#contact">CONTACT US</a></div>
-					<span class="hidden-text d-none">It can be really fun and interesting to learn how to code. Being able to code is a great skill to have and it is very useful, especially because 
-					coding is used in all electronic devices we use every day! Some examples are mobile phones, laptops, washing machines, television, the ticket machine at the train station and the vacuum cleaner.</span>
-				</p>
-			</span>
-		</div>
-		
-		<div class="feature">
-			<div class="">
-				<i class="fas fa-anchor fa-3x lightblue"></i>
-				<h3 class="mb-4 mt-2 lightblue">Our objective</h3>
-				<p>
-					At <i>CodeFest Academy</i>, we aim to equip pupils with the skills they need for the world of work, inspire more young people
-					to pursue careers in computing and help them to solve problem and become logical thinkers. We don't want to live in a world where young people just consume the web.
-					We want to help them actively create the content they are engaging with.
-				</p>
+		<div class="main-content">
+			<div class="intro page-margin-x">
+				<span>
+					<h3 class="text-center mb-4 lightblue"><i class="fas fa-laptop-code fa-2x"></i><br><br>Coding and Robotics?</h3>
+					<p>
+						Coding, sometimes called computer programming, is how we communicate with computers. Code tells a computer what actions to take, and writing code is like creating a set of instructions. By learning to write code, you can tell computers what to do or how to behave in a much faster way. You can use this skill to make websites and apps, process data, and do lots of other cool things.
+						<br>
+					</p>
+					<div class="intro-buttons">
+						<a href="coding-robotics.html">READ MORE</a>
+						<a href="#contact">CONTACT US</a>
+					</div>
+				</span>
 			</div>
-			<div class="">
-				<i class="fas fa-people-arrows fa-3x lightblue"></i>
-				<h3 class="mb-4 mt-2 lightblue">Who we work with</h3>
-				<p>
-					CodeFest is focused on reaching out to students and introducing them to computer coding/programming. in order to achieve this purpose, we partner with local schools who have the capacity to run the program.
-					So, our target is primary and secondary schools. By learning coding at an early age comes with lots of benefits which should not be overlooked.
-				</p>
-			</div>
-			<div class="">
-				<i class="fas fa-street-view fa-3x lightblue"></i>
-				<h3 class="mb-4 mt-2 lightblue">Top Reasons Why Coding is Important For Kids</h3>
-				<p>
-					Rise of the technology has taken over everything today and has been so since a while now. 
-					Coding in this generation has become very prominent. It has stepped up their game in the field of technology. 
-					Coding is the core of technology.
-				</p>
-				<a href="coding-for-kids.html">Read more...</a>
-			</div>
-		</div>
-
-		<div class="curriculum text-white">
-			<h3 class="text-warning text-center my-3">Our curricullum</h3>
-			Our curricullum is designed to simplify learning coding in a step-by-step approach. Topics are significantly broken down to help learners understand the concept.
-			Our tutors engage the students once a week, but in a situation whereby the school has more students, the engagement will be twice per week.
-			Pupils in<br><br>
-			<ul>
-				<li>Year 1 to 6 will learn Scratch programming and App Inventor</li>
-				<li>Year 7 to 9 will learn App Inventor and website design</li>
-				<li>Year 10 to 12 will learn website design and Arduino.</li>
-			</ul>
-		</div>
-		
-		<div class="tutors">
-			<div class="text-center">
-				<i class="fas fa-user-tie fa-2x lightblue"></i><br>
-				<h3 class="mb-5 mt-3 lightblue">Our Tutors</h3>
-				<div>
-					Our team consist of qualified computer techies with excellent work rate. They are trained and retrained to acquired knowledge on the latest technologies. 
-					They are patient while working with underage students and carry every student along.
-					They always deliver with excellence and make sure no student is deficient of the knowledge passed.
+			
+			<div class="feature page-margin-x">
+				<div class="">
+					<i class="fas fa-anchor fa-3x lightblue"></i>
+					<h3 class="mb-4 mt-2 lightblue">Our objective</h3>
+					<p>
+						At <i>CodeFest Academy</i>, we aim to equip pupils with the skills they need for the world of work, inspire more young people
+						to pursue careers in computing and help them to solve problem and become logical thinkers. We don't want to live in a world where young people just consume the web.
+						We want to help them actively create the content they are engaging with.
+					</p>
+				</div>
+				<div class="">
+					<i class="fas fa-people-arrows fa-3x lightblue"></i>
+					<h3 class="mb-4 mt-2 lightblue">Who we work with</h3>
+					<p>
+						CodeFest is focused on reaching out to students and introducing them to computer coding/programming. in order to achieve this purpose, we partner with local schools who have the capacity to run the program.
+						So, our target is primary and secondary schools. By learning coding at an early age comes with lots of benefits which should not be overlooked.
+					</p>
+				</div>
+				<div class="">
+					<i class="fas fa-street-view fa-3x lightblue"></i>
+					<h3 class="mb-4 mt-2 lightblue">Top Reasons Why Coding is Important For Kids</h3>
+					<p>
+						Rise of the technology has taken over everything today and has been so since a while now. 
+						Coding in this generation has become very prominent. It has stepped up their game in the field of technology. 
+						Coding is the core of technology.
+					</p>
+					<a href="coding-for-kids.html">Read more...</a>
 				</div>
 			</div>
-		</div>
-		
-		<div class="parralax" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/pupils-activities.jpg)">
-			<i class="fas fa-laptop-code fa-4x mb-5 text-warning"></i>
-			<span>Programs We Offer</span>
-		</div>
-		
-		<div class="w-100 pt-3 pb-5 bg-light">
-			<h3 class="text-center mt-4 pt-3 px-5 mb-3" style="color:orange">Scratch Computer Coding</h3>
-			<div class="d-flex w-100 px-2 align-items-center justify-content-between">
-				<div style="width:32%"><img src="images/scratch3.jpeg" class="w-100"></div>
-				<p style="width:65%">Scratch is a high-level block-based visual programming language aimed primarily at children as an educational tool for programming, 
-					with a target audience of ages 5 to 16. Learners can create game, animation and story projects on their computer using a block-like interface. 
-					Projects can be exported or converted to standalone HTML5, Android apps, Bundle (macOS) and EXE files using external tools.
-				</p>
+
+			<div class="curriculum text-white">
+				<div class="page-margin-x">
+					<h3 class="text-warning text-center my-3">Our curricullum</h3>
+					Our curricullum is designed to simplify learning coding in a step-by-step approach. Topics are significantly broken down to help learners understand the concept.
+					Our tutors engage the students once a week, but in a situation whereby the school has more students, the engagement will be twice per week.
+					Pupils in<br><br>
+					<ul>
+						<li>Year 1 to 6 will learn Scratch programming and App Inventor</li>
+						<li>Year 7 to 9 will learn App Inventor and website design</li>
+						<li>Year 10 to 12 will learn website design and Arduino.</li>
+					</ul>
+				</div>
 			</div>
 			
-			<h3 style="color:green;" class="text-center mt-5 px-5 mb-3">MIT App Inventor Coding</h3>
-			<div class="d-flex w-100 px-2 align-items-center justify-content-between">
-				<div style="width:32%"><img src="images/ai.jpg" class="w-100"></div>
-				<p style="width:65%">
-					MIT App Inventor is an intuitive, visual programming environment that allows everyone even children to build fully functional apps for smartphones and tablets. 
-					It is a blocks-based programming which facilitates the creation of complex, high-impact apps in significantly less time. 
-					The MIT App Inventor seeks to empower all people, especially young people, to move from technology consumption to technology creation.
-				</p>
-			</div>
-			
-			<h3 style="color:teal;" class="text-center mt-5 px-5 mb-3">Arduino Robotics and Electronics</h3>
-			<div class="d-flex w-100 px-2 align-items-center justify-content-between">
-				<div style="width:32%"><img src="images/arduino-logo.jpg" class="w-100"></div>
-				<p style="width:65%">
-					Arduino is a software as well as hardware platform that helps in making electronic projects. It is an open source platform and has a variety of controllers and microprocessors.
-					There are various projects created with the help of the Arduino. Some of the projects are:
-					Home Automation System using IoT (Internet of Things), smart trash can, fire Detector, automatic street light, car robot etc.
-				</p>
-			</div>
-			
-			<h3 class="text-center mt-5 px-5 mb-3 text-danger">Website Design (HTML/CSS)</h3>
-			<div class="d-flex w-100 px-3 align-items-center justify-content-between">
-				<div style="width:32%"><img src="images/htmlcss.jpg" class="w-100"></div>
-				<p style="width:65%">
-					Website design is the creation of webpages. HTML is the standard markup language for creating Web pages, it is the language of the Web. <br>CSS is the language that is used to style an HTML document.
-					CSS describes how HTML elements should be displayed. It can control the layout of multiple web pages all at once.
-				</p>
-			</div>
-		</div>
-		
-		<div id="contact" class="contact px-3 py-5" style="background: linear-gradient(rgb(0,0,0), rgb(230,230,250))">
-			<p class="text-light">
-				Are you a school owner? Would like to include Coding/Robotics in your curricullum?
-				Talk to us now on WhatsApp. Our location is limited to Lagos state, Nigeria.
-			</p>
-			<h3 class="text-light text-center py-3"><i class="fas fa-envelope"></i> Contact Us</h3>
-			<form class="d-flex flex-column bg-light p-3 rounded">
-				<label for="txtName">Name:</label>
-				<input id="txtName" type="text" placeholder="Enter your name/school name">
-				<br>
-				<label for="txtMsg">Message:</label>
-				<textarea id="txtMsg"></textarea>
-				<br>
+			<div class="tutors">
 				<div class="text-center">
-					<a href="https://wa.me/2348068654944" id="whatsapplink"><img src="images/WhatsAppButtonGreenSmall.png" style="width: 60%;"></a>
-				</div>
-			</form>
-			<div class="d-flex justify-content-center mt-2">
-				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook fa-2x text-light"></i></a>
-				<a href="https://wa.me/2348068654944" class="p-2 mx-1"><i class="fab fa-whatsapp fa-2x text-light"></i></a>
-				<a href="#" class="p-2 mx-1"><i class="fab fa-twitter fa-2x text-light"></i></a>
-				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook-messenger fa-2x text-light"></i></a>
-			</div>
-		</div>
-		
-		<h3 class="text-center pt-4 mt-5 mb-4 lightblue"><i class="fas fa-quote-left"></i> What they say... <i class="fas fa-quote-right"></i></h3>
-		
-		<div class="testimony-container" data-width="300px">
-			<div class="testimony clearfix">
-				<div>
-					<img src="images/parent1.jpg">
-					<span class="name">Ajibola Cole</span>
-					<span class="desc">
-						<span class="profession d-block">Health Practitioner</span>
-						<span class="message">I love seeing my kids playing games he created. She's been creative and a good problem solver.</span>
-					</span>
-				</div>
-				<div>
-					<img src="images/parent2.jpg">
-					<span class="name">Stephen Mathew</span>
-					<span class="desc">
-						<span class="profession d-block">Civil Engineer</span>
-						<span class="message">Thanks for introducing Coding and Robotics to my child's school. He's really enjoying it.</span>
-					</span>
-				</div>
-				<div>
-					<img src="images/parent3.jpg">
-					<span class="name">Chidimma Okeke</span>
-					<span class="desc">
-						<span class="profession d-block">School Principal</span>
-						<span class="message">Our school is one of the sort after because of Coding in our curricullum. Students are creating technology for the fun of it</span>
-					</span>
-				</div>
-				<div>
-					<img src="images/parent4.jpg">
-					<span class="name">Justina Ekpo</span>
-					<span class="desc">
-						<span class="profession d-block">Parent</span>
-						<span class="message">It's amazing! my child creates automatic home light, car robot and some other techie stuff. I can pay any amount for this program</span>
-					</span>
-				</div>
-				<div>
-					<img src="images/parent5.jpg">
-					<span class="name">Justina Ekpo</span>
-					<span class="desc">
-						<span class="profession d-block">Parent</span>
-						<span class="message">It's amazing! my child creates automatic home light, car robot and some other techie stuff. I can pay any amount for this program</span>
-					</span>
+					<i class="fas fa-user-tie fa-2x lightblue"></i><br>
+					<h3 class="mb-5 mt-3 lightblue">Our Tutors</h3>
+					<div>
+						Our team consist of qualified computer techies with excellent work rate. They are trained and retrained to acquired knowledge on the latest technologies. 
+						They are patient while working with underage students and carry every student along.
+						They always deliver with excellence and make sure no student is deficient of the knowledge passed.
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="nav-button mt-2"></div>
-	
-		<div class="partners d-sm-none">
-			<div class="text-center mb-4 lightblue"><i class="fas fa-people-carry fa-3x"></i><h3>Our Partners</h3></div>
-			<div class="slide clearfix">
-				<div>
-					<img src="images/ecopillars-badge.jpeg">
+			
+			<div class="parralax" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/pupils-activities.jpg)">
+				<i class="fas fa-laptop-code fa-4x mb-5 text-warning"></i>
+				<span>Programs We Offer</span>
+			</div>
+			
+			<div class="program-list">
+				<h3 style="color:orange">Scratch Computer Coding</h3>
+				<div class="program-desc">
+					<div style="width:32%"><img src="images/scratch3.jpeg" class="w-100"></div>
+					<p style="width:65%">Scratch is a high-level block-based visual programming language aimed primarily at children as an educational tool for programming, 
+						with a target audience of ages 5 to 16. Learners can create game, animation and story projects on their computer using a block-like interface. 
+						Projects can be exported or converted to standalone HTML5, Android apps, Bundle (macOS) and EXE files using external tools.
+					</p>
 				</div>
-				<div class="xx">
-					<img src="images/city-pride.jpeg">
+				
+				<h3 style="color:green;">MIT App Inventor Coding</h3>
+				<div class="program-desc">
+					<div style="width:32%"><img src="images/ai.jpg" class="w-100"></div>
+					<p style="width:65%">
+						MIT App Inventor is an intuitive, visual programming environment that allows everyone even children to build fully functional apps for smartphones and tablets. 
+						It is a blocks-based programming which facilitates the creation of complex, high-impact apps in significantly less time. 
+						The MIT App Inventor seeks to empower all people, especially young people, to move from technology consumption to technology creation.
+					</p>
 				</div>
-				<div>
-					<img src="images/tai-solarin.jpeg">
+				
+				<h3 style="color:teal;">Arduino Robotics and Electronics</h3>
+				<div class="program-desc">
+					<div style="width:32%"><img src="images/arduino-logo.jpg" class="w-100"></div>
+					<p style="width:65%">
+						Arduino is a software as well as hardware platform that helps in making electronic projects. It is an open source platform and has a variety of controllers and microprocessors.
+						There are various projects created with the help of the Arduino. Some of the projects are:
+						Home Automation System using IoT (Internet of Things), smart trash can, fire Detector, automatic street light, car robot etc.
+					</p>
 				</div>
-				<div>
-				<img src="images/malad-badge.jpeg">
+				
+				<h3 class="text-danger">Website Design (HTML/CSS)</h3>
+				<div class="program-desc mb-0">
+					<div style="width:32%"><img src="images/htmlcss.jpg" class="w-100"></div>
+					<p style="width:65%">
+						Website design is the creation of webpages. HTML is the standard markup language for creating Web pages, it is the language of the Web. <br>CSS is the language that is used to style an HTML document.
+						CSS describes how HTML elements should be displayed. It can control the layout of multiple web pages all at once.
+					</p>
 				</div>
+			</div>
+
+			<div class="counter-container">
+				<div class="counter-wrapper">
+					<p>Students engaged</p>
+					<div>
+						<span class="counter" data-count="537">0</span>
+					</div>
+				</div>
+
+				<div class="counter-wrapper">
+					<p>Our partners</p>
+					<div>
+						<span class="counter" data-count="8">0</span>
+					</div>
+				</div>
+
+				<div class="counter-wrapper">
+					<p>Dedicated tutors</p>
+					<div class="mb-0">
+						<span class="counter" data-count="19">0</span>
+					</div>
+				</div>
+			</div>
+			
+			<div id="contact" class="contact px-3 py-5" style="background: linear-gradient(rgb(0,0,0), rgb(230,230,250))">
+				<p class="text-light">
+					Are you a school owner? Would like to include Coding/Robotics in your curricullum?
+					Talk to us now on WhatsApp. Our location is limited to Lagos state, Nigeria.
+				</p>
+				<h3 class="text-light text-center py-3"><i class="fas fa-envelope"></i> Contact Us</h3>
+				<form class="d-flex flex-column bg-light p-3 rounded">
+					<label for="txtName">Name:</label>
+					<input id="txtName" type="text" placeholder="Enter your name/school name">
+					<br>
+					<label for="txtMsg">Message:</label>
+					<textarea id="txtMsg"></textarea>
+					<br>
+					<div class="text-center">
+						<a href="https://wa.me/2348068654944" id="whatsapplink"><img src="images/WhatsAppButtonGreenSmall.png" style="width: 60%;"></a>
+					</div>
+				</form>
+				<div class="d-flex justify-content-center mt-2">
+					<a href="#" class="p-2 mx-1"><i class="fab fa-facebook fa-2x text-light"></i></a>
+					<a href="https://wa.me/2348068654944" class="p-2 mx-1"><i class="fab fa-whatsapp fa-2x text-light"></i></a>
+					<a href="#" class="p-2 mx-1"><i class="fab fa-twitter fa-2x text-light"></i></a>
+					<a href="#" class="p-2 mx-1"><i class="fab fa-facebook-messenger fa-2x text-light"></i></a>
+				</div>
+			</div>
+			
+			<h3 class="text-center pt-4 mt-5 mb-4 lightblue"><i class="fas fa-quote-left"></i> What they say... <i class="fas fa-quote-right"></i></h3>
+			
+			<div class="testimony-container" data-width="300px">
+				<div class="testimony clearfix">
+					<div>
+						<img src="images/parent1.jpg">
+						<span class="name">Ajibola Cole</span>
+						<span class="desc">
+							<span class="profession d-block">Health Practitioner</span>
+							<span class="message">I love seeing my kids playing games he created. She's been creative and a good problem solver.</span>
+						</span>
+					</div>
+					<div>
+						<img src="images/parent2.jpg">
+						<span class="name">Stephen Mathew</span>
+						<span class="desc">
+							<span class="profession d-block">Civil Engineer</span>
+							<span class="message">Thanks for introducing Coding and Robotics to my child's school. He's really enjoying it.</span>
+						</span>
+					</div>
+					<div>
+						<img src="images/parent3.jpg">
+						<span class="name">Chidimma Okeke</span>
+						<span class="desc">
+							<span class="profession d-block">School Principal</span>
+							<span class="message">Our school is one of the sort after because of Coding in our curricullum. Students are creating technology for the fun of it</span>
+						</span>
+					</div>
+					<div>
+						<img src="images/parent4.jpg">
+						<span class="name">Justina Ekpo</span>
+						<span class="desc">
+							<span class="profession d-block">Parent</span>
+							<span class="message">It's amazing! my child creates automatic home light, car robot and some other techie stuff. I can pay any amount for this program</span>
+						</span>
+					</div>
+					<div>
+						<img src="images/parent5.jpg">
+						<span class="name">Justina Ekpo</span>
+						<span class="desc">
+							<span class="profession d-block">Parent</span>
+							<span class="message">It's amazing! my child creates automatic home light, car robot and some other techie stuff. I can pay any amount for this program</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="nav-button mt-2"></div>
+		
+			<div class="partners">
+				<div class="text-center mb-4 lightblue"><i class="fas fa-people-carry fa-3x"></i><h3>Our Partners</h3></div>
+				<div class="slide clearfix">
+					<div>
+						<img src="images/ecopillars-badge.jpeg">
+					</div>
+					<div class="xx">
+						<img src="images/city-pride.jpeg">
+					</div>
+					<div>
+						<img src="images/tai-solarin.jpeg">
+					</div>
+					<div>
+					<img src="images/malad-badge.jpeg">
+					</div>
+				</div>
+			</div>
+
+			<div class="for-laptop d-none d-sm-bloc">
+				<h2>CodeFest Academy</h2>
+				<div>Please use a mobile device to view this website. Or, resize your browser to the width of mobilephone.</div>
 			</div>
 		</div>
 
-		<div class="for-laptop d-none d-sm-block">
-			<h2>CodeFest Academy</h2>
-			<div>Please use a mobile device to view this website. Or, resize your browser to the width of mobilephone.</div>
-		</div>
-
-		<footer-component class="d-sm-none"></footer-component>
+		<footer-component class=""></footer-component>
 
 		<script>
-			//alert($(".banner").height())
+			$(".counter").each(function(i, v){
+				var counter = new Counter({"speed":2, "distance":40})
+				
+				counter.begin($(this))
+			})
 		</script>
 	</main>
 </body>
