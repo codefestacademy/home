@@ -10,16 +10,20 @@
 	<script src="scripts/jquery-3.6.1.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/all.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="scripts/wow.min.js"></script>
 	<script src="scripts/counter.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="components/menubar.js"></script>
 	<script src="components/topnav.js"></script>
 	<script src="components/footer.js"></script>
-
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amita">
 	<style>
-		
+		body{
+			font-family: Amita !important;
+		}
 	</style>
-	
+		
 	<script>
 		$(document).ready(function(){
 			let trans = ["slideUp","fadeOut"]
@@ -30,15 +34,19 @@
 					$(this).show()
 				})
 			}, 5000)
+			
+			wow = new WOW()
+			wow.init();
 		})
+		
 	</script>
 </head>
 
 <body>
-	<topnav-component class="d-sm-none"></topnav-component>
-	<menubar-component class="d-none d-sm-block"></menubar-component>
+	<topnav-component></topnav-component>
+	<menubar-component></menubar-component>
 
-	<main id="main" class="">
+	<main id="main">
 		<div class="banner px-2">
 			<span class="text-light">
 				<h1 class="w-3">CodeFest Academy</h1>
@@ -55,7 +63,7 @@
 						Coding, sometimes called computer programming, is how we communicate with computers. Code tells a computer what actions to take, and writing code is like creating a set of instructions. By learning to write code, you can tell computers what to do or how to behave in a much faster way. You can use this skill to make websites and apps, process data, and do lots of other cool things.
 						<br>
 					</p>
-					<div class="intro-buttons">
+					<div class="intro-buttons wow slideInLeft" data-wow-duration="5s" data-wow-distance="20">
 						<a href="coding-robotics.html">READ MORE</a>
 						<a href="#contact">CONTACT US</a>
 					</div>
@@ -63,7 +71,7 @@
 			</div>
 			
 			<div class="feature page-padding-x">
-				<div class="">
+				<div>
 					<i class="fas fa-anchor fa-3x lightblue"></i>
 					<h3 class="mb-4 mt-2 lightblue">Our objective</h3>
 					<p>
@@ -106,7 +114,7 @@
 				</div>
 			</div>
 			
-			<div class="tutors">
+			<div class="tutors page-padding-x">
 				<div class="text-center">
 					<i class="fas fa-user-tie fa-2x lightblue"></i><br>
 					<h3 class="mb-5 mt-3 lightblue">Our Tutors</h3>
@@ -167,7 +175,7 @@
 				<div class="counter-wrapper">
 					<p>Students engaged</p>
 					<div>
-						<span class="counter" data-count="837">0</span>
+						<span class="counter" data-count="1437">0</span>
 					</div>
 				</div>
 

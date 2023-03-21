@@ -9,10 +9,24 @@
 	<script src="scripts/jquery-3.6.1.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/all.min.js"></script>
+	<script src="components/menubar.js"></script>
 	<script src="components/topnav.js"></script>
 	<script src="components/footer.js"></script>
 
 <style type="text/css">
+	.banner{
+		background: teal;
+		color: #fff;
+		padding-top: 130px;
+		padding-bottom: 30px;
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	for{
+		margin-top: 50px;
+	}
+	
 	#txtName, #txtMsg{
 		border: solid 1px rgba(0,0,255,0.5);
 		border-radius: 5px;
@@ -20,9 +34,14 @@
 		transition: 0.3s;
 	}
 	
+	#txtName , #txtMsg{
+		border: 1px solid black;
+	}
+	
 	#txtName:focus , #txtMsg:focus{
-		box-shadow: 0px 0px 0px 3px rgba(0,0,255,0.4);
-		border: solid 1px rgba(0,0,255,0.5) !important;
+		box-shadow: 0px 0px 0px 3px rgba(0,0,255,0.2);
+		border: solid 1px black !important;
+		outline: none;
 	}
 	
 	.sharebtn{
@@ -31,6 +50,100 @@
 	
 	form{
 		background: #eee;
+		display: flex;
+		flex-direction: column;
+		padding: 30px 20px;
+		margin: 50px 250px;
+		color: #666;
+	}
+	
+	div.menubar{
+		background: blac;
+	}
+	
+	
+	
+/*****************
+	tablet style
+*****************/
+	
+	@media only screen and (max-width: 700px){
+	.banner{
+	background: teal;
+	color: #fff;
+	padding-top: 75px;
+	padding-bottom: 20px;
+	font-size: 1.5em;
+	text-align: center;
+	}
+	
+	form{
+		background: #eee;
+		display: flex;
+		flex-direction: column;
+		padding: 30px 20px;
+		margin: 50px 20%;
+		color: #666;
+	}
+	
+	div.menubar{
+		background: black;
+	}
+	}
+	
+	
+	
+/*****************
+	mobile style
+*****************/
+	
+	@media only screen and (max-width: 600px){
+	.banner{
+	background: teal;
+	color: #fff;
+	padding-top: 90px;
+	padding-bottom: 30px;
+	font-size: 1.5em;
+	text-align: center;
+	}
+	
+	for{
+	margin-top: 50px;
+	}
+	
+	#txtName, #txtMsg{
+	border: solid 1px rgba(0,0,255,0.5);
+	border-radius: 5px;
+	padding: 5px;
+	transition: 0.3s;
+	}
+	
+	#txtName , #txtMsg{
+	border: 1px solid black;
+	}
+	
+	#txtName:focus , #txtMsg:focus{
+	box-shadow: 0px 0px 0px 3px rgba(0,0,255,0.2);
+	border: solid 1px rgba(0,0,255,0.5) !important;
+	outline: none;
+	}
+	
+	.sharebtn{
+	background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
+	}
+	
+	form{
+	background: #eee;
+	display: flex;
+	flex-direction: column;
+	padding: 30px 20px;
+	margin: 50px 20px;
+	color: #666;
+	}
+	
+	div.menubar{
+	background: black;
+	}
 	}
 </style>
 
@@ -74,34 +187,24 @@ $(document).ready(function(){
 </head>
 <body>
 	<topnav-component></topnav-component>
+	<menubar-component></menubar-component>
 	
 	<main id="main">
-		<div class="container">
-		<h3 class="text-dark text-center py-5"><i class="fas fa-envelope"></i> Contact Us</h3>
-		<form class="d-flex flex-column px-4 py-5 rounded">
+		<div class="banner">
+			<span><i class="fas fa-envelope"></i> Contact Us</span>
+		</div>
+		
+		<form class="rounded">
 			<label for="txtName">Name:</label>
-			<input id="txtName" type="text" placeholder="Enter your name/school name">
+			<input id="txtName" type="text" required placeholder="Enter your name/school name">
 			<br>
 			<label for="txtMsg">Message:</label>
-			<textarea id="txtMsg"></textarea>
-			<br>
+			<textarea id="txtMsg" required></textarea>
+				<br>
 			<div class="text-center mt-4">
 				<a href="https://wa.me/2348068654944" id="whatsapplink"><img src="images/WhatsAppButtonGreenSmall.png" style="width: 70%;"></a>
 			</div>
 		</form>
-		
-		<span class="d-none">
-			<div class="d-flex justify-content-center mt-2">
-				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook fa-2x text-dark"></i></a>
-				<a href="https://wa.me/2348068654944" class="p-2 mx-1"><i class="fab fa-whatsapp fa-2x text-dark"></i></a>
-				<a href="#" class="p-2 mx-1"><i class="fab fa-twitter fa-2x text-dark"></i></a>
-				<a href="#" class="p-2 mx-1"><i class="fab fa-facebook-messenger fa-2x text-dark"></i></a>
-			</div>
-			<div class="text-center mt-2">
-				<button onclick="shareHandler()" type="button" class="sharebtn btn btn-primary"><i class="fas fa-share-square"></i> Share this website</button>
-			</div>
-		</span>
-		</div>
 		
 		<div style="margin-top:100px;"></div>
 		<footer-component></footer-component>

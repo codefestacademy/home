@@ -10,6 +10,7 @@
 	<script src="scripts/jquery-3.6.1.min.js"></script>
 	<script src="scripts/bootstrap.min.js"></script>
 	<script src="scripts/all.min.js"></script>
+	<script src="components/menubar.js"></script>
 	<script src="components/topnav.js"></script>
 	<script src="components/footer.js"></script>
 	
@@ -18,9 +19,14 @@
 			line-height: 32px;
 		}
 		
-		.pad-x{
-			margin-left: 20px;
-			margin-right: 20px;
+		.page-margin-x{
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+		
+		.content-padding-x{
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 		
 		.banner{
@@ -28,7 +34,9 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
-			padding: 50px 0;
+			padding-top: 150px;
+			padding-bottom: 80px;
+			margin-top: 0px;
 			text-align: center;
 			color: #fff;
 		}
@@ -37,16 +45,20 @@
 			margin-top: 80px;
 		}
 		
+		.mission-sep{
+			margin-top: 0px;
+		}
+		
 		.borders{
 			border: 1px solid #ddd;
 			border-radius: 5px;
-			padding: 50px 10px;
 		}
 		
 		.mycard{
 			text-align: center;
 			background: #eee;
-			padding: 50px 0;
+			padding-top: 50px;
+			padding-bottom: 50px;
 			border-radius: 5px;
 		}
 		
@@ -54,46 +66,138 @@
 			width: 150px;
 			height: 150px;
 			border-radius: 50%;
-			border: 1px solid purple;
+			box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
 			margin: 30px auto;
+			margin-bottom:50px;
 			display: block;
+		}
+		
+		.mission-vision{
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align: center;
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.mission-vision > div{
+			width: 45%;
+		}
+		
+		/**********************
+		mobile style
+		*/
+		@media only screen and (max-width: 600px){
+		body{
+			line-height: 32px;
+		}
+		
+		.page-margin-x{
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		
+		.content-padding-x{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		
+		.banner{
+			background: linear-gradient(rgba(0,51,77,0.9),rgba(0,51,77,0.9)), url(images/kids-repair-robot.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			margin-top: 50px;
+			text-align: center;
+			color: #fff;
+		}
+		
+		.seperator{
+			margin-top: 80px;
+		}
+		
+		.mission-sep{
+			margin-top: 80px;
+		}
+		
+		.borders{
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+		
+		.mycard{
+			text-align: center;
+			background: #eee;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			border-radius: 5px;
+		}
+		
+		.mycard img{
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
+			margin: 30px auto;
+			margin-bottom:50px;
+			display: block;
+		}
+		
+		.mission-vision{
+			padding-top: 50px;
+			padding-bottom: 50px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.mission-vision > div{
+			width: 100%;
+		}
 		}
 	</style>
 </head>
 <body>
 	<topnav-component></topnav-component>
+	<menubar-component></menubar-component>
 	
 	<span id="main">
-	<div class="banner px-3">
-		<h1>About Us</h1>
+	<div class="banner content-padding-x">
+		<h1 class="display-1">About Us</h1>
 		<span>CodeFest Academy - Coding and Robotics for kids</span>
 	</div>
 	
-	<section class="sec1 mission-vission seperator pad-x borders text-center">
+	<section class="mission-vision seperator page-margin-x content-padding-x borders text-cente">
 		<div>
 			<h3>OUR MISSION</h3>
-			to prepare youth with the core principles of how all software is created so they can feel confident and be able to contribute to technology of the future.
+			CodeFest Academy prepares youth with the core principles of how all software is created so they can feel confident and be able to 
+			contribute to technology of the future.
 		</div>
 	
-		<div class="mt-5">
+		<div class="mission-sep">
 			<h3>OUR VISION</h3>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat justo mattis lacus sagittis condimentum. Donec vitae quam augue. Nam maximus magna et lobortis convallis. Aliquam auctor elementum suscipit
+			Every child should have the opportunity to learn computer coding. Education must evolve with today’s computing-intensive world. 
+			Along with reading, writing, and math, understanding the fundamentals of coding is critical to students today becoming well-educated, 
+			well-prepared global citizens tomorrow.
 		</div>
 	</section>
 	
-	<section class="sec2">
-		<div class="mycard seperator pad-x">
+	<section class="sec2 page-margin-x">
+		<div class="mycard seperator content-padding-x">
 			<h3>Iyke Ezekwesili</h3>
 			<img src="images/kids-repair-robot.jpg" >
-			Duis sollicitudin hendrerit mauris sed gravida. Aenean iaculis aliquet fringilla. Phasellus nec velit sit amet turpis fringilla malesuada.
+			<div clsss="">
+			A computing enthusiast, website developer, a mentor and a great teacher.<br>
+			A graduate of Computer Science at IMT Enugu, Nigeria.
+			</div>
 		</div>
 	
-		<div class="about-content seperator pad-x">
+		<div class="about-content seperator text-center">
 			<h3>Behind the success</h3>
-			In eget magna eu sem rutrum facilisis vitae ullamcorper nunc. Integer luctus accumsan sagittis. Maecenas blandit, lorem non molestie eleifend, justo nisl tempus quam, 
-			at rhoncus turpis sapien eu nunc. Aliquam pharetra lorem nec velit interdum tristique. Ut faucibus neque sed tempus convallis. Praesent egestas mollis bibendum. Mauris 
-			dictum aliquam vehicula. Aenean a nisi nec urna tincidunt venenatis. Proin rutrum eu neque vitae lobortis. Nunc aliquet, risus in convallis luctus, purus velit finibus neque, 
-			ut fermentum enim lorem a nisi. Aliquam congue justo vel mi sagittis mattis. Cras egestas vel eros eu pretium. Integer sed facilisis ex, vel suscipit risus.
+			Since its inception, CodeFest Academy has grown to serve dozens of schools in Lagos state, providing high quality coding classes to thousands 
+			of primary and secondary school students. Through partnerships with the various schools CodeFest is able to impart coding knowledge to the students with standard facilities for learning.
 		</div>
 	</section>
 	
