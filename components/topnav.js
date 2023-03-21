@@ -29,7 +29,6 @@ class Topnav extends HTMLElement {
 			<style>
 			*{
 				box-sizing: border-box;
-				font-family: 'Nanum Gothic', sans-serif;
 			}
 			
 			.clearfix::after {
@@ -42,7 +41,6 @@ class Topnav extends HTMLElement {
 				width: 100%;
 				height: 100%;
 				margin: 0;
-				padding-top: 25px;
 			}
 			
 			.topnav{
@@ -128,6 +126,20 @@ class Topnav extends HTMLElement {
 			
 			.sharebtn{
 				background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
+			}
+			
+			.topnav{
+				displa: fixed;
+			}
+			
+			@media only screen and (min-width: 681px){
+				.topnav{
+					display: none;
+				}
+				
+				.topnav .menu-items{
+					width: 50%;
+				}
 			}
 			</style>
 			

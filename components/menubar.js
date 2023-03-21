@@ -10,6 +10,7 @@ class Menubar extends HTMLElement {
 				
 			})
 		})
+		
 	}
 
   	connectedCallback() {
@@ -47,6 +48,7 @@ class Menubar extends HTMLElement {
 			.menubar .logo{
 				color: orange;
 				font-size: 1.4em;
+				text-decoration: none;
 			}
 
 			.menubar .links a{
@@ -68,21 +70,25 @@ class Menubar extends HTMLElement {
 				
 			}
 
-			@media only screen and (min-width: 600px){
+			@media only screen and (min-width: 681px){
 				body{
 					overflow: auto;
+				}
+			}
+			
+			@media only screen and (max-width: 680px){
+				.menubar{
+					display: none;
 				}
 			}
 			</style>
 			
        		<div class="menubar sticky">
-       			<span class="logo">
+       			<a href="index.html" class="logo">
 				   <img src="images/logo.png" width=50 height=50> CodeFest Academy
-				</span>
+				</a>
 				<span class="links">
-					<a href="gallery.html">Gallery</a>
-					<a href="contact.html">Contact</a>
-					<a href="about.html">About</a>
+					<a href="index.html">Home</a>
 					<a href="gallery.html">Gallery</a>
 					<a href="contact.html">Contact</a>
 					<a href="about.html">About</a>
