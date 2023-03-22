@@ -12,9 +12,50 @@ body{
 }
 
 .banner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin-top: 0px;
+}
+
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+
+.banner > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: left;
+	padding-left: 15px;
+}
+
+.banner-header{
+	font-size: 3.5rem;
+	color: #fff;
+	font-weight: 200;
+}
+
+
+.banner-desc{
+	font-size: 1.5rem;
+	color: #fff;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+/*.banner{
 	display: flex;
 	align-items: center;
-	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/3-kids-with-tablet.jpg");
+	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("..");
 	height: 70vh;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -26,7 +67,7 @@ body{
 .banner h1{
 	font-size: 4em;
 	font-weight: 100;
-}
+}*/
 
 .intro{
 	margin-top: 200px;
@@ -376,20 +417,44 @@ body{
 }
 
 .banner{
-	display: flex;
-	align-items: center;
-	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/3-kids-with-tablet.jpg");
-	height: 400px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	color: white;
-	border-bottom: solid 2px orange;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
 }
 
-.banner h1{
-	font-size: 2.2em;
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+
+.banner > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-left: 5px;
+}
+
+.banner-header{
+	font-size: 2.1rem;
+	color: #fff;
+	font-weight: 200;
+}
+
+
+.banner-desc{
+	font-size: 1.1rem;
+	color: #fff;
 	font-weight: 300;
+	margin-bottom: 30px;
 }
 
 .intro{
@@ -730,20 +795,42 @@ body{
 }
 
 .banner{
-	display: flex;
-	align-items: center;
-	background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/3-kids-with-tablet.jpg");
-	height: 400px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	color: white;
-	border-bottom: solid 2px orange;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
 }
 
-.banner h1{
-	font-size: 2.2em;
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+
+.banner > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 5px;
+}
+
+.banner-header{
+	font-size: 2.1rem;
+	color: #fff;
 	font-weight: 300;
+}
+
+
+.banner-desc{
+	font-size: 1.1rem;
+	color: #fff;
+	font-weight: 300;
+	margin-bottom: 30px;
 }
 
 .intro{
