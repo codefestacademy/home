@@ -16,6 +16,7 @@
 
 <style>
 body,html{
+	box-sizing: border-box;
 	background-color: lavender;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -25,18 +26,33 @@ body,html{
 }
 
 .header{
-	padding-top: 150px;
-	padding-bottom: 60px;
-	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/kid-with-laptop.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	position: relative;
+	font-size: 1.3em;
+	margin-top: 0px;
+	height: 400px;
+	width: 100%;
+}
+
+.header img{
+	width: 100%;
+	height: 100%;
+}
+
+.header div{
+	position: absolute;
+	top: 0;
 	display: flex;
 	justify-content: center;
-    align-items: center;
-	color: #ffffff;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.header h1{
+	color: white;
 	text-align: center;
-	font-size: 2em;
+	padding: 0 100px;
 }
 
 .date{
@@ -85,9 +101,33 @@ tablet style
 }
 
 .header{
+	position: relative;
 	font-size: 1.3em;
-	padding-top: 80px;
-	padding-bottom: 30px;
+	margin-top: 50px;
+	height: 200px;
+	width: 100%;
+}
+
+.header img{
+	width: 100%;
+	height: 100%;
+}
+
+.header div{
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.header h1{
+	color: white;
+	text-align: center;
+	padding: 100px;
 }
 }
        	
@@ -102,20 +142,34 @@ mobile style
 #main{
 	line-height: 30px;
 }
-		
+
 .header{
-	padding-top: 80px;
-	padding-bottom: 30px;
-	background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/kid-with-laptop.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	position: relative;
+	font-size: 1.3em;
+	margin-top: 50px;
+	width: 100%;
+	height: 100%;
+}
+
+.header img{
+	width: 100%;
+}
+
+.header div{
+	position: absolute;
+	top: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #ffffff;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.header h1{
+	color: white;
 	text-align: center;
-	font-size: 1.5em;
+	padding: 0 30px;
 }
 		
 article > div > img{
@@ -132,6 +186,7 @@ article > div > img{
 .sub-heading{
 	font-size: 2.3em;
 	margin-bottom: 20px;
+	color: #264d00;
 }
 		
 li{
@@ -166,7 +221,10 @@ li{
     
     <div id="main">
     <div class="header">
-        Top Reasons Why Coding is Important For Kids
+    	<img src="images/kid-with-laptop.jpg">
+        <div>
+        	<h1>Reasons Why Coding is Important For Kids</h1>
+    	</div>
     </div>
    
     <div class="date page-margin-x">
