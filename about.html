@@ -14,159 +14,222 @@
 	<script src="components/topnav.js"></script>
 	<script src="components/footer.js"></script>
 	
-	<style type="text/css">
-		body{
-			line-height: 32px;
-		}
+<style>
+body{
+	line-height: 32px;
+}
 		
-		.page-margin-x{
-			margin-left: 100px;
-			margin-right: 100px;
-		}
+.page-margin-x{
+	margin-left: 100px;
+	margin-right: 100px;
+}
 		
-		.content-padding-x{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+.content-padding-x{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.banner{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+}
+
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+
+.banner > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-header{
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+.banner-desc{
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin-top: 20px;
+	padding: 0 30px;
+}
 		
-		.banner{
-			background: linear-gradient(rgba(0,51,77,0.9),rgba(0,51,77,0.9)), url(images/kids-repair-robot.jpg);
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			padding-top: 150px;
-			padding-bottom: 80px;
-			margin-top: 0px;
-			text-align: center;
-			color: #fff;
-		}
+.seperator{
+	margin-top: 80px;
+}
 		
-		.seperator{
-			margin-top: 80px;
-		}
+.mission-sep{
+	margin-top: 0px;
+}
 		
-		.mission-sep{
-			margin-top: 0px;
-		}
+.borders{
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
 		
-		.borders{
-			border: 1px solid #ddd;
-			border-radius: 5px;
-		}
+.mycard{
+	text-align: center;
+	background: #eee;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-radius: 5px;
+}
 		
-		.mycard{
-			text-align: center;
-			background: #eee;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			border-radius: 5px;
-		}
+.mycard img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
+	margin: 30px auto;
+	margin-bottom:50px;
+	display: block;
+}
 		
-		.mycard img{
-			width: 150px;
-			height: 150px;
-			border-radius: 50%;
-			box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
-			margin: 30px auto;
-			margin-bottom:50px;
-			display: block;
-		}
+.mission-vision{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
 		
-		.mission-vision{
-			padding-top: 50px;
-			padding-bottom: 50px;
-			text-align: center;
-			display: flex;
-			justify-content: space-between;
-		}
+.mission-vision > div{
+	width: 45%;
+}
 		
-		.mission-vision > div{
-			width: 45%;
-		}
 		
-		/**********************
-		mobile style
-		*/
-		@media only screen and (max-width: 600px){
-		body{
-			line-height: 32px;
-		}
 		
-		.page-margin-x{
-			margin-left: 20px;
-			margin-right: 20px;
-		}
 		
-		.content-padding-x{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
+/**********************
+mobile style
+**********************/
 		
-		.banner{
-			background: linear-gradient(rgba(0,51,77,0.9),rgba(0,51,77,0.9)), url(images/kids-repair-robot.jpg);
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			margin-top: 50px;
-			text-align: center;
-			color: #fff;
-		}
+@media only screen and (max-width: 700px){
+body{
+	line-height: 32px;
+}
 		
-		.seperator{
-			margin-top: 80px;
-		}
+.page-margin-x{
+	margin-left: 20px;
+	margin-right: 20px;
+}
 		
-		.mission-sep{
-			margin-top: 80px;
-		}
+.content-padding-x{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.banner{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-top: 50px;
+}
+
+.banner img{
+	width: 100%;
+	height: 100%;
+}
+
+.banner > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	display: flex;
+	text-align: center;
+	align-items: center;
+}
+
+.banner-header{
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+.banner-desc{
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin-top: 20px;
+	padding: 0 30px;
+}
 		
-		.borders{
-			border: 1px solid #ddd;
-			border-radius: 5px;
-		}
+.seperator{
+	margin-top: 80px;
+}
 		
-		.mycard{
-			text-align: center;
-			background: #eee;
-			padding-top: 50px;
-			padding-bottom: 50px;
-			border-radius: 5px;
-		}
+.mission-sep{
+	margin-top: 80px;
+}
 		
-		.mycard img{
-			width: 150px;
-			height: 150px;
-			border-radius: 50%;
-			box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
-			margin: 30px auto;
-			margin-bottom:50px;
-			display: block;
-		}
+.borders{
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
 		
-		.mission-vision{
-			padding-top: 50px;
-			padding-bottom: 50px;
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-		}
+.mycard{
+	text-align: center;
+	background: #eee;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-radius: 5px;
+}
 		
-		.mission-vision > div{
-			width: 100%;
-		}
-		}
-	</style>
+.mycard img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
+	margin: 30px auto;
+	margin-bottom:50px;
+	display: block;
+}
+		
+.mission-vision{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+		
+.mission-vision > div{
+	width: 100%;
+}
+}
+</style>
 </head>
+
 <body>
-	<topnav-component></topnav-component>
-	<menubar-component></menubar-component>
+<topnav-component></topnav-component>
+<menubar-component></menubar-component>
 	
-	<span id="main">
-	<div class="banner content-padding-x">
-		<h1 class="display-1">About Us</h1>
-		<span>CodeFest Academy - Coding and Robotics for kids</span>
+<div id="main">
+	<div class="banner">
+		<img src="images/banner-about-us.png">
+		<div>
+			<div>
+				<div class="banner-header">About Us</div>
+				<h1 class="banner-desc">CodeFest Academy - Coding and Robotics for kids</h1>
+			</div>
+		</div>
 	</div>
 	
 	<section class="mission-vision seperator page-margin-x content-padding-x borders text-cente">
@@ -206,6 +269,6 @@
 	</section>
 	
 	<footer-component></footer-component>
-	</span>
+</div>
 </body>
 </html>
