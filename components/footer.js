@@ -10,7 +10,7 @@ class Footer extends HTMLElement {
     	this.innerHTML = `
     		<style>
     			.footer{
-    				padding: 30px 10px;
+    				padding: 10px;
     				background: #333;
     				color: gray;
 					text-align: center;
@@ -20,15 +20,20 @@ class Footer extends HTMLElement {
 					height: 30px;
 					width: 30px;
 				}
+				
+				.mail-phone a{
+					text-decoration: none;
+					color: #aaa;
+				}
     		</style>
        		<div class="footer">
-       			<div class="d-flex justify-content-between">
+       			<div class="d-flex justify-content-between align-items-center">
        				<span><img src="./images/logo.png" > &copy; <span id="year"></span></span>
-       				<span>POWERED BY:<br>CodeFest</span>
+       				<span>Powered by<br>CodeFest</span>
 				</div>
-				<div class="text-center mt-4">
-					<div><i class="fas fa-envelope"></i> iykeezekwesili@gmail.com</div>
-					<div><i class="fas fa-phone"></i> 0806-8654944</div>
+				<div class="mail-phone text-center mt-4">
+					<div><i class="fas fa-envelope"></i> <a href="mailto:codefestacademy@gmail.com">codefestacademy@gmail.com</a></div>
+					<div><i class="fas fa-phone"></i> <a href="tel:08068654944">08068654944</a></div>
 				</div>
        		</div>
     	`
