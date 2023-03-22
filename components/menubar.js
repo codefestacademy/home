@@ -3,11 +3,21 @@ class Menubar extends HTMLElement {
 		super()
 
 		$(document).ready(function(){
-			const menubarHeight = document.querySelector(".menubar").height()
-			alert(menubarHeight)
-
+		
 			$(window).scroll(function(){
-				
+				if ($(window).scrollTop() >= 60){
+					$(".menubar").css({
+						"background-color":"rgba(0, 0, 0, 1)",
+						"box-shadow":"3px 3px 5px rgba(0,0,0,0.5)"
+					})
+				}
+				else{
+					
+					$(".menubar").css({
+						"background-color":"rgba(0, 0, 0, 0.4)",
+						"box-shadow":"none"
+					})
+				}
 			})
 		})
 		
@@ -43,6 +53,7 @@ class Menubar extends HTMLElement {
 				padding: 20px 10px;
 				top: 0;
 				z-index: 999;
+				transition: 0.5s;
 			}
 
 			.menubar .logo{
