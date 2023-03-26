@@ -1,4 +1,4 @@
-class Topnav extends HTMLElement {
+class Mobilenavbar extends HTMLElement {
 	constructor(){
 		super()
 
@@ -20,6 +20,31 @@ class Topnav extends HTMLElement {
 					$("#main").css("filter","blur(5px)")
 				}
 				menu.toggleClass("menu-slidein")
+			})
+			
+			
+			
+			/******************************************
+			mobile menu slide up and down on scroll
+			*******************************************/
+			
+			var prevScrollPos = $(window).scrollTop()
+			var slideDelay = 500
+			$(window).scroll(function(){
+				var currentScrollPos = $(this).scrollTop()
+				if ($(window).scrollTop() > 150){
+					if(currentScrollPos > prevScrollPos){
+						setTimeout(function(){
+							$(".mobilenavbar").css("top", -70)
+						}, slideDelay)
+					}
+					else{
+						setTimeout(function(){
+							$(".mobilenavbar").css("top", 0)
+						}, slideDelay)
+					}
+				}
+				prevScrollPos = $(window).scrollTop()
 			})
 		})
 	}
@@ -43,12 +68,12 @@ class Topnav extends HTMLElement {
 				margin: 0;
 			}
 			
-			.topnav{
+			.mobilenavbar{
 				position: fixed;
 				top: 0px;
 				left: 0;
 				width: 100%;
-				background: orange;
+				background: #2f4f4f;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -56,19 +81,20 @@ class Topnav extends HTMLElement {
 				padding: 0 5px;
 				z-index: 9999;
 				overflow: auto;
+				transition: 0.3s;
 			}
 			
-			.topnav img{
+			.mobilenavbar img{
 				width: 50px;
 			}
 			
-			.topnav a{
-				color: black;
+			.mobilenavbar a{
+				color: #fff;
 				text-decoration: none;
 				padding: 5px;
 			}
 			
-			.topnav .menu-items{
+			.mobilenavbar .menu-items{
 				position: fixed;
 				overflow: auto;
 				width: 70%;
@@ -81,16 +107,16 @@ class Topnav extends HTMLElement {
 				transition: 0.3s;
 			}
 			
-			.topnav .menu-slidein{
+			.mobilenavbar .menu-slidein{
 				left: 0%;
 			}
 			
-			.topnav .menu-items a{
+			.mobilenavbar .menu-items a{
 				display: block;
 				color: white;
 			}
 			
-			.topnav .overlay{
+			.mobilenavbar .overlay{
 				position: fixed;
 				top: 53px;
 				height: 100vh;
@@ -128,22 +154,22 @@ class Topnav extends HTMLElement {
 				background: linear-gradient(to right, rgb(64, 0, 255), rgb(255, 0, 191));
 			}
 			
-			.topnav{
+			.mobilenavbar{
 				displa: fixed;
 			}
 			
 			@media only screen and (min-width: 681px){
-				.topnav{
+				.mobilenavbar{
 					display: none;
 				}
 				
-				.topnav .menu-items{
+				.mobilenavbar .menu-items{
 					width: 50%;
 				}
 			}
 			</style>
 			
-       		<div class="topnav">
+       		<div class="mobilenavbar">
        			<a href="index.html"><img src="images/logo.png"> CodeFest</a>
        			<div class="overlay"></div>
        			<div class="menu-items">
@@ -176,11 +202,11 @@ class Topnav extends HTMLElement {
        				<div style="margin-bottom: 200px;"></div>
        			</div>
        			<div class="menubars">
-       				<i class="fas fa-bars fa-2x"></i>
+       				<i class="fas fa-bars fa-2x text-white"></i>
        			</div>
        		</div>
     	`
   	}
 }
 
-customElements.define('topnav-component', Topnav);
+customElements.define('mobilenavbar-component', Mobilenavbar);
