@@ -46,20 +46,29 @@ class Mobilenavbar extends HTMLElement {
 				}
 				prevScrollPos = $(window).scrollTop()
 			})
+			
+			var url = location.href.substr(location.href.lastIndexOf("/")+1)
+			url = $(".menu-items a[href*='" +url+ "']")
+			url.css({"color":"black", "padding-left":"+=10px"})
+			url.removeAttr("href")
+			url.prepend("<i class='fas fa-chevron-right text-white'></i> ")
 		})
 	}
 
   	connectedCallback() {
 		this.innerHTML = `
+			
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 			<style>
 			*{
 				box-sizing: border-box;
+				font-family: Montserrat;
 			}
 			
 			.clearfix::after {
-			  content: "";
-			  clear: both;
-			  display: table;
+			  	content: "";
+			 	clear: both;
+			  	display: table;
 			}
 			
 			body, html{
@@ -77,7 +86,7 @@ class Mobilenavbar extends HTMLElement {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				box-shadow: 1px 0px 5px 2px black;
+				box-shadow: 0px 4px 5px #000;
 				padding: 0 5px;
 				z-index: 9999;
 				overflow: auto;
@@ -88,10 +97,23 @@ class Mobilenavbar extends HTMLElement {
 				width: 50px;
 			}
 			
-			.mobilenavbar a{
-				color: #fff;
+			.mobilenavbar .menu-items a{
 				text-decoration: none;
-				padding: 5px;
+				padding-left: 15px;
+				padding-bottom: 10px;
+				font-weight: 700;
+				font-size: 1rem;
+				display: block;
+				color: white;
+			}
+			
+			.mobilenavbar .company-name{
+				background: linear-gradient(white, lightblue);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-decoration: none;
+				font-size: 1.5rem;
+				font-weight: 900;
 			}
 			
 			.mobilenavbar .menu-items{
@@ -111,11 +133,6 @@ class Mobilenavbar extends HTMLElement {
 				left: 0%;
 			}
 			
-			.mobilenavbar .menu-items a{
-				display: block;
-				color: white;
-			}
-			
 			.mobilenavbar .overlay{
 				position: fixed;
 				top: 53px;
@@ -127,13 +144,7 @@ class Mobilenavbar extends HTMLElement {
 			
 			.social-container{
 				display: flex;
-				font-size: 1.1rem;
 				flex-direction: column;
-			}
-			
-			.social-container *{
-				font-size: 1.1rem;
-				color: #fff;
 			}
 			
 			.social-header{
@@ -145,7 +156,8 @@ class Mobilenavbar extends HTMLElement {
 			}
 			
 			.social-container a{
-				padding: 5px;
+				padding: 10px;
+				padding-left: 15px;
 				background: rgba(0,0,0,0.2);
 				margin-bottom: 1px;
 			}
@@ -166,11 +178,13 @@ class Mobilenavbar extends HTMLElement {
 				.mobilenavbar .menu-items{
 					width: 50%;
 				}
+				
 			}
 			</style>
 			
-       		<div class="mobilenavbar">
-       			<a href="index.html"><img src="images/logo.png"> CodeFest</a>
+       		<div class="mobilenavbar py-1">
+       			<div><a href="index.html"><img src="images/logo.png"></a></div>
+       			<div class="company-name">CodeFest</div>
        			<div class="overlay"></div>
        			<div class="menu-items">
        				<a href="index.html">Home</a>
@@ -179,7 +193,7 @@ class Mobilenavbar extends HTMLElement {
        				<a href="about.html">About</a>
        				<div class="social-header">Connect with us</div>
        				<div class="social-container">
-       					<a href="https://facebook">
+       					<a href="https://facebook.com/iykeman_007">
        						<i class="fab fa-facebook"></i>
        						<span>Facebook</span>
        					</a>
@@ -187,7 +201,7 @@ class Mobilenavbar extends HTMLElement {
        						<i class="fab fa-whatsapp"></i>
        						<span>WhatsApp</span>
        					</a>
-       					<a href="https://me.facebook/">
+       					<a href="https://facebook.com/iykeman_007">
        						<i class="fab fa-facebook-messenger"></i>
        						<span>Facebook Messenger</span>
        					</a>
