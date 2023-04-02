@@ -15,7 +15,7 @@ class FloatButtons extends HTMLElement {
 					}else{
 						clearInterval(interval)
 					}
-				}, 60)
+				}, 150)
 			})
 			
 		})
@@ -55,7 +55,7 @@ class FloatButtons extends HTMLElement {
 				
 				.float-btns .btns{
 					transform: translateX(100px);
-					transition: 0.1s;
+					transition: 0.2s;
 				}
 				
 				.float-btns-slide{

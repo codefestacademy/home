@@ -59,10 +59,14 @@ class Mobilenavbar extends HTMLElement {
 		this.innerHTML = `
 			
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+			
 			<style>
 			*{
 				box-sizing: border-box;
-				font-family: Montserrat;
+				font-family: Ubuntu, Montserrat, Roboto Mono;
+				font-size: 1.01em;
 			}
 			
 			.clearfix::after {
@@ -87,14 +91,15 @@ class Mobilenavbar extends HTMLElement {
 				justify-content: space-between;
 				align-items: center;
 				box-shadow: 0px 4px 5px #000;
-				padding: 0 5px;
+				padding: 0px;
 				z-index: 9999;
 				overflow: auto;
 				transition: 0.3s;
 			}
 			
 			.mobilenavbar img{
-				width: 50px;
+				width: 40px;
+				margin: 5px;
 			}
 			
 			.mobilenavbar .menu-items a{
@@ -170,6 +175,21 @@ class Mobilenavbar extends HTMLElement {
 				displa: fixed;
 			}
 			
+			button.menubars {
+				border: none;
+				outline: none;
+				margin: 0px;
+				background: none;
+			}
+			
+			.menubars span{
+				display: block;
+				width: 30px;
+				height: 3px;
+				margin: 6px;
+				background: white;
+			}
+			
 			@media only screen and (min-width: 681px){
 				.mobilenavbar{
 					display: none;
@@ -215,9 +235,12 @@ class Mobilenavbar extends HTMLElement {
        				</div>
        				<div style="margin-bottom: 200px;"></div>
        			</div>
-       			<div class="menubars">
-       				<i class="fas fa-bars fa-2x text-white"></i>
-       			</div>
+       			<button class="menubars">
+       				<i class="fas fa-bars fa-2x text-white d-none"></i>
+       				<span></span>
+       				<span></span>
+       				<span></span>
+       			</button>
        		</div>
     	`
   	}

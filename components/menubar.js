@@ -28,7 +28,6 @@ class Menubar extends HTMLElement {
 			<style>
 			*{
 				box-sizing: border-box;
-				font-family: 'Nanum Gothic', sans-serif;
 			}
 			
 			.clearfix::after {
