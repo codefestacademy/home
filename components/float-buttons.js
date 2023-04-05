@@ -4,10 +4,10 @@ class FloatButtons extends HTMLElement {
 
 		$(document).ready(function(){
 			var btns = $(".btns")
-			var x
+			var x  // translateX(0px|100px) initial value is 100px - out of viewport
 			
-			$(".toggle").click(function(){
-				var i = 0
+			$(".toggler").click(function(){
+				var i = 0  // button index
 				x = (x==0 ? 100 : 0)
 				var interval = setInterval(function(){
 					if (i < btns.length){
@@ -37,10 +37,10 @@ class FloatButtons extends HTMLElement {
 				}
 				
 				.float-btns a{
-					height: 60px;
-					width: 60px;
-					background: #2f4f4f;
-					color: lightgreen;
+					height: 50px;
+					width: 50px;
+					background: #fff;
+					color: #000;
 					border-radius: 50%;
 					margin: 5px 0px;
 					box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
@@ -71,9 +71,10 @@ class FloatButtons extends HTMLElement {
 			</style>
 			
        		<div class="float-btns" >
+       			<a href="contact.html" class="message btns"><i class="fas fa-envelope fa-2x"></i></a>
        			<a href="tel:2348068654944" class="call btns"><i class="fas fa-phone fa-2x"></i></a>
        			<a href="https://wa.me/2348068654944" class="whatsapp btns"><i class="fab fa-whatsapp fa-2x"></i></a>
-       			<a class="toggle"><i class="fab fa-rocketchat fa-2x"></i></a>
+       			<a class="toggler"><i class="fab fa-rocketchat fa-2x"></i></a>
        		</div>
     	`
   	}
