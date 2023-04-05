@@ -89,6 +89,29 @@ li{
    	margin-left: 120px;
   	margin-right: 120px;
 }
+
+.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.content img{
+	width: 40%;
+}
+
+.content > div{
+	width: 55%;
+}
+
+.content:nth-child(odd) img {
+	order: 2;
+}
+
+.content:nth-child(even) div {
+	order: 1;
+}
        	
        	
        	
@@ -200,6 +223,31 @@ li{
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.content img{
+	width: 100%;
+	order: initial;
+}
+
+.content > div{
+	width: 100%;
+	order: initial;
+}
+
+.content:nth-child(odd) img {
+	order: initial;
+}
+
+.content:nth-child(even) div {
+	order: initial;
+}
 }
 </style>
 
@@ -250,24 +298,29 @@ li{
 			and coding is one of those tools.
     	</div>
     	
-   		<div class="pad-top">
+   		<div class="pad-top content">
    			<img src="images/coding-board.jpg" class="pad-top page-pad">
+   			<div class="">
    			<h1 class="sub-heading">What is a good age to start coding?</h1>
    			A good age to start coding is while a child is still young - often in primary school. 
    			Coding is essential now more than ever to prepare students for the future. When students learn the basics of coding, 
    			it opens up a whole new world full of exciting opportunities for them. Learning has no age limit, but we believe young minds are more 
    			active and can learn new things easily. Around the time that children start learning to read and write is a great age to start coding.
+   			</div>
    		</div>
    		
-   		<div class="pad-top">
+   		<div class="pad-top content">
    			<img src="images/kids-and-robot.jpg" class="pad-top page-pad">
+   			<div class="">
    			<h1 class="sub-heading">Does robotics need coding?</h1>
    			Yes, robotics definitely needs coding. Coding is an essential set of instructions that a robot can read and execute. Robotics combines the use of electronics, 
    			mechanics, and coding software to program robots to do particular jobs. Robots can easily perform those tasks that humans are not able to perform.
+   			</div>
    		</div>
    		
-   		<div class="pad-top">
+   		<div class="pad-top content">
    			<img src="images/kids-repair-robot.jpg" class="pad-top page-pad">
+   			<div class="">
    			<h1 class="sub-heading">What skills do robotics and coding teach students?</h1>
    			Children who learn robotics and coding will pick up many skills including strong critical thinking skills. 
    			There are different ways to solve problems, and those who learn robotics learn how to choose the optimal solution for the problem. 
@@ -279,6 +332,7 @@ li{
    				<li><b>Analytical thinking:</b> For huge robotics problems, students have to breakdown the problem into segments, and then find the solution.</li>
    				<li><b>Improve the written and verbal communication skills:</b> Communication is an absolutely essential skill throughout life.</li>
    			</ul>
+   			</div>
    		</div>
    		</article>
    		
