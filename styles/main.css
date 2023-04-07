@@ -37,7 +37,6 @@ body{
 	align-items: flex-start;
 	text-align: left;
 	padding-left: 15px;
-	z-index: 10;
 }
 
 .banner-header{
@@ -57,18 +56,16 @@ body{
 .curve{
 	position: absolute;
 	bottom: 0px;
-	z-index: 11;
 }
 
 .intro{
-	margin-top: 200px;
+	margin-top: 50px;
 	display: flex;
 	align-items: center;
 }
 
 .intro p{
-	padding: 50px 150px;
-	z-index: 12;
+	padding: 30px 200px;
 }
 
 .btn-partner{
@@ -104,7 +101,7 @@ body{
 .feature{
 	display: flex;
 	justify-content: space-between;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 .feature > div{
@@ -762,7 +759,7 @@ body{
 }
 
 .intro{
-	margin: 80px 15px 0 15px;
+	margin: 50px 15px 0 15px;
 	display: flex;
 	align-items: center;
 }
@@ -805,7 +802,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	padding: 0 15px;
-	margin-top: 80px;
+	margin-top: 50px;
 }
 
 .feature > div{
@@ -901,18 +898,18 @@ body{
 
 .nav-button span{
 	margin: 2px;
-	width: 15px;
-	height: 15px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
 	background: white;
 	border: solid 1px black;
 }
 
-.current{
+testimony.current{
 	background: black;
 }
 
-.name{
+testimony.name{
 	position: absolute;
 	width: 100%;
 	background: rgba(0,0,0,0.5);
@@ -925,7 +922,7 @@ body{
 	font-size: 1.2em;
 }
 
-.desc{
+testimony.desc{
 	position: absolute;
 	width: 100%;
 	background: rgba(0,0,0,0.5);
