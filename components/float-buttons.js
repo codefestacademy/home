@@ -56,25 +56,36 @@ class FloatButtons extends HTMLElement {
 				.float-btns .btns{
 					transform: translateX(100px);
 					transition: 0.2s;
+					font-size: 2.5rem;
 				}
 				
 				.float-btns-slide{
 					transform: translateX(0px);
 				}
 				
-				@media only screen and (min-width: 700px){
-					.float-btns{
-						margin: 20px;
-						margin-bottom: 50px;
+				@media only screen and (max-width: 700px){
+					.float-btns .btns{
+						font-size: 1.3rem;
+					}
+					
+					.float-btns a{
+						height: 40px;
+						width: 40px;
+						background: rgba(255,120,0,0.7);
+						color: white;
+					}
+					
+					.float-btns .whatsapp, .toggler{
+						font-size: 1.5rem;
 					}
 				}
 			</style>
 			
        		<div class="float-btns" >
-       			<a href="contact.html" class="message btns"><i class="fas fa-envelope fa-2x"></i></a>
-       			<a href="tel:2348068654944" class="call btns"><i class="fas fa-phone fa-2x"></i></a>
-       			<a href="https://wa.me/2348068654944" class="whatsapp btns"><i class="fab fa-whatsapp fa-2x"></i></a>
-       			<a class="toggler"><i class="fab fa-rocketchat fa-2x"></i></a>
+       			<a href="contact.html" class="message btns"><i class="fas fa-envelope"></i></a>
+       			<a href="tel:2348068654944" class="call btns"><i class="fas fa-phone"></i></a>
+       			<a href="https://wa.me/2348068654944" class="whatsapp btns"><i class="fab fa-whatsapp" style=""></i></a>
+       			<a class="toggler text-dark border"><i class="fab fa-rocketchat fa-1x"></i></a>
        		</div>
     	`
   	}
