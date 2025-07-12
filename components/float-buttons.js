@@ -83,8 +83,8 @@ class FloatButtons extends HTMLElement {
 			
        		<div class="float-btns" >
        			<a href="contact.html" class="message btns"><i class="fas fa-envelope"></i></a>
-       			<a href="tel:2348068654944" class="call btns"><i class="fas fa-phone"></i></a>
-       			<a href="https://wa.me/2348068654944" class="whatsapp btns"><i class="fab fa-whatsapp" style=""></i></a>
+       			<a href="tel:2349112017104" class="call btns"><i class="fas fa-phone"></i></a>
+       			<a href="https://wa.me/2349112017104" class="whatsapp btns"><i class="fab fa-whatsapp" style=""></i></a>
        			<a class="toggler text-dark border"><i class="fab fa-rocketchat fa-1x"></i></a>
        		</div>
     	`
