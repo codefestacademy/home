@@ -33,7 +33,7 @@ class Footer extends HTMLElement {
 				</div>
 				<div class="mail-phone text-center mt-4">
 					<div><i class="fas fa-envelope"></i> <a href="mailto:codefestacademy@gmail.com">codefestacademy@gmail.com</a></div>
-					<div><i class="fas fa-phone"></i> <a href="tel:08068654944">08068654944</a></div>
+					<div><i class="fas fa-phone"></i> <a href="tel:+2349112017104">09112017104</a></div>
 				</div>
        		</div>
     	`
